@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eed6d533eb5a4683ac5dd6701ad2d09e" Name="Diagram1">
+        <EntityTypeShape EntityType="KazinoProjectModel.AuditLogs" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoProjectModel.Bets" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoProjectModel.GameHistory" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoProjectModel.GameSessions" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoProjectModel.Reports" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoProjectModel.Transactions" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KazinoProjectModel.Users" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="KazinoProjectModel.FK_AuditLogs_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_Bets_GameSessions" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_Bets_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_GameHistory_Bets" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_GameHistory_GameSessions" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_GameHistory_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_GameSessions_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KazinoProjectModel.FK_Transactions_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

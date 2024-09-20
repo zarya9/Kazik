@@ -1,0 +1,38 @@
+﻿<Page x:Class="Kazik.Pages.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kazik.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Authorization">
+
+    <Grid Background="#FF902B2B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="36" Margin="10" Foreground="#FFE7E92F" FontFamily="Comic Sans MS" FontWeight="Bold">
+            🎰Kazino🍒
+        </TextBlock>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="19" FontSize="18" FontFamily="Comic Sans MS">Имя пользователя:</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="10" Name="txtUserName" Height="30"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="19" FontSize="18" FontFamily="Comic Sans MS">Пароль:</TextBlock>
+        <PasswordBox Grid.Row="4" Grid.Column="1" Margin="10" Name="txtPassword" Height="30"/>
+
+        <Button x:Name="BtnAuth" Grid.Row="5" Grid.Column="1" Margin="19,10,157,10" Width="90" Content="Войти" FontSize="14" FontFamily="Comic Sans MS" Background="#FFE7E92F" Click="BtnAuth_Click"/>
+        <Button x:Name="BtnReg" Grid.Row="5" Grid.Column="1" Width="90" Margin="157,10,19,10" Content="Регистрация"  Background="#FFE7E92F" FontSize="14" FontFamily="Comic Sans MS" Click="BtnReg_Click"/>
+    </Grid>
+</Page>

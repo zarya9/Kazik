@@ -1,0 +1,49 @@
+﻿<Page x:Class="Kazik.Pages.TransactList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kazik.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TransactList">
+
+    <Grid Background="#FF902B2B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#2C3E50" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin ="10,20,10,20" >
+            <Button Content="Игры" Name="Games" Height="40" FontSize="16" Foreground="White" Background="Gray"  HorizontalAlignment="Stretch" />
+            <Button Content="Смена данных" Height="40" Name="EditData" FontSize="16" Foreground="White" Background="Gray" HorizontalAlignment="Stretch" />
+            <Button Content="История транзакций" Height="40" Name="History" FontSize="16" Foreground="White" Background="#2980B9"  HorizontalAlignment="Stretch"/>
+            <Button Content="Пополнить счет" Height="40" Name="Help" FontSize="16" Foreground="White" Background="Gray"  HorizontalAlignment="Stretch"/>
+            <Button Content="Вывести" Height="40" Name="Vivod" FontSize="16" Foreground="White" Background="Gray"  HorizontalAlignment="Stretch"/>
+            <Button Content="Назад" Height="40"  Name="Exit" FontSize="16" Foreground="White" Background="#E74C3C"  HorizontalAlignment="Stretch" Click="Exit_Click"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Center">
+            <TextBlock Text="🎰Личный кабинет🍒" FontSize="26" FontWeight="Bold" Foreground="#FFE7E92F" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+            <TextBlock Text="🎰Переводы🍒" FontSize="26" FontWeight="Bold" Foreground="#FFE7E92F" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Height="250" Grid.Column="1" >
+
+                <ScrollViewer   VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <ListView x:Name="LvTransact" Width="auto">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="№" DisplayMemberBinding="{Binding  ID}" Width="auto"/>
+                                    <GridViewColumn Header="Тип" DisplayMemberBinding="{Binding TransactionType}" Width="auto"/>
+                                    <GridViewColumn Header="Сумма" DisplayMemberBinding="{Binding Amount}" Width="auto"/>
+                                    <GridViewColumn Header="Время" DisplayMemberBinding="{Binding TransactionDate}" Width="auto"/>
+                                    <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding Status}" Width="auto"/>
+                                    
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    </ScrollViewer>
+            </StackPanel>
+       
+    </Grid>
+</Page>
